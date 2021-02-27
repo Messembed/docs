@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Messembed](README.md)
 
 ## API <a id="perepiski"></a>
 
