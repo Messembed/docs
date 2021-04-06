@@ -2,12 +2,12 @@
 
 * [Messembed](README.md)
 
-## API <a id="perepiski"></a>
+## API
 
-* [Client API](perepiski/client-api/README.md)
-  * [Node.js SDK](perepiski/client-api/node.js-sdk.md)
-* [Server API \(Admin\)](perepiski/server-api/README.md)
-  * [Node.js SDK](perepiski/server-api/node.js-sdk/README.md)
-    * [Chat](perepiski/server-api/node.js-sdk/chat.md)
-    * [Users](perepiski/server-api/node.js-sdk/users.md)
+* [Client API](api/client-api/README.md)
+  * [Node.js SDK](api/client-api/node.js-sdk.md)
+* [Server API \(Admin\)](api/server-api/README.md)
+  * [Node.js SDK](api/server-api/node.js-sdk/README.md)
+    * [Chat](api/server-api/node.js-sdk/chat.md)
+    * [Users](api/server-api/node.js-sdk/users.md)
 
