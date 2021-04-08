@@ -19,7 +19,7 @@ import { Message, PersonalChat } from 'messembed-sdk';
 const messembed = new MessembedSdk({ ... });
 
 // Получаем текущий список чатов
-const chats = await messembed.getPersonalChats();
+const chats = await messembed.listPersonalChats();
 
 // Устанавливаем обработчики событий
 messembed
