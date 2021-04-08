@@ -48,8 +48,8 @@ messembed
 
 // Получение списка сообщений
 // Полезно, например, когда нужно показывать историю сообщений.
-await messembed.findMessages({ chatId: '...' });
-await messembed.findMessages({
+await messembed.listMessages({ chatId: '...' });
+await messembed.listMessages({
   chatId: '...',
   after: new Date('...'), // Отправленные после. Необъязательный параметр
   before: new Date('...'), // Отправленные до. Необъязательный параметр
