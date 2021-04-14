@@ -4,7 +4,7 @@
 
 ## API
 
-* [Client API](api/client-api/README.md)
+* [Client JavaScript API](api/client-api/README.md)
   * [Объект Message](api/client-api/obekt-message.md)
 * [Server API \(Admin\)](api/server-api/README.md)
   * [Node.js SDK](api/server-api/node.js-sdk/README.md)
