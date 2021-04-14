@@ -55,7 +55,7 @@ const paginatedMessages = await messembed.listMessages({
 | `before` | `Date` | Переданный во время запроса параметр `before` |
 | `offset` | `number` | Переданный во время запроса параметр `offset` |
 | `limit` | `number` | Переданный во время запроса параметр `limit` |
-| `messages` | \`\`[`Message`](obekt-message.md)`[]` | Массив объектов, представляющих сообщения. Подробнее про объект сообщения можно узнать на странице ["Объект Message"](obekt-message.md) |
+| `messages` | \`\`[`Message[]`](obekt-message.md)\`\` | Массив объектов, представляющих сообщения. Подробнее про объект сообщения можно узнать на странице ["Объект Message"](obekt-message.md) |
 
 ### Отправка сообщений
 
