@@ -141,6 +141,8 @@ await messembed.sendMessageOverWS({
 
 Такой механизм позволяет получать не только список прикрепленных файлов, но и информацию о том, к каким сообщениям они были прикреплены.
 
+Метод возвращает массив из объектов типа [Message](../../).
+
 ```typescript
 const messagesWithAttachments: Message[] =
     await messembed.listMessagesWithAttachments({
@@ -162,7 +164,7 @@ console.log(messagesWithAttachments);
 ]
 ```
 
-### Полный пример кода
+### Полный пример кода из этой страницы
 
 ```typescript
 import { Message, PersonalChat } from 'messembed-sdk';
