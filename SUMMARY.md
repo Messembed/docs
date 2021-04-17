@@ -12,3 +12,7 @@
     * [Users](api/server-api/node.js-sdk/users.md)
     * [Блокирование чатов и пользователей](api/server-api/node.js-sdk/blocking-chats-and-users.md)
 
+## deployment
+
+* [Deploy with Docker Compose](deployment/docker-compose.md)
+
