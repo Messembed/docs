@@ -71,6 +71,14 @@ await messembed.sendMessageOverWS({chatId: '...', content: 'Привет!'});
 await messembed.sendWritingIndicator('...');
 ```
 
+### Прочитывание сообщения
+
+Когда пользователь читает сообщение, то вам нужно вызвать метод `.readChat(<chat id>)` который пометит чат как прочитанным для текущего пользователя:
+
+```typescript
+await messembed.readChat('<chat id>');
+```
+
 ### Подписка на события
 
 Устанавливаем обработчики событий.
