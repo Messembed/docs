@@ -24,3 +24,7 @@ Messembed - это сервис, который позволяет создав�
 
 {% page-ref page="api/server-api/" %}
 
+{% page-ref page="deployment/docker-compose.md" %}
+
+
+
