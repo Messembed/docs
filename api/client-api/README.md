@@ -225,6 +225,11 @@ await messembed.sendMessageOverWS({chatId: '...', content: 'Привет!'});
 // В параметре передается ID чата
 await messembed.sendWritingIndicator('...');
 
+// Помечаем чат как прочитанный
+// В таком случае все сообщения, которые были не прочитанными,
+// станут прочитанными
+await messembed.readChat('<chat id>')
+
 ```
 
 ### 
