@@ -22,7 +22,7 @@ const chats = await messembed.listPersonalChats()
 // Или с параметрами
 const chats = await messembed.listPersonalChats({
   // Поиск чатов по сообщениям. Если задать этот парамтер,
-  // то в результате в поле lastMessage будет содержать 
+  // то в результате поле lastMessage будет содержать 
   // последнее сообщение в чате, которое соответствует поиску.
   // Необзятельный парамтер
   query: '',
@@ -42,15 +42,103 @@ const chats = await messembed.listPersonalChats({
 
 `chats` - это массив объектов `PersonalChat`, который имеет следующие поля:
 
-| Поле | Тип | Описание |
-| :--- | :--- | :--- |
-| `_id` | `string` | ID чата |
-| `createdAt` | `Date` | Дата создания чата |
-| `updatedAt` | `Date` | Дата последнего обновления полей чата |
-| `active` | `boolean` | Активен ли чат \(см. [блокирование отдельных чатов](../server-api/node.js-sdk/blocking-chats-and-users.md#blokirovanie-otdelnogo-chata)\) |
-| `externalMetadata` | `json` | Произвольные данные |
-| `companion` | `User` | Объект, представляющий собеседника в данном чате |
-| `unreadMessagesCount` | `number` | Количество непрочитанных сообщений в данном чате |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x41F;&#x43E;&#x43B;&#x435;</th>
+      <th style="text-align:left">&#x422;&#x438;&#x43F;</th>
+      <th style="text-align:left">&#x41E;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x438;&#x435;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>_id</code>
+      </td>
+      <td style="text-align:left"><code>string</code>
+      </td>
+      <td style="text-align:left">ID &#x447;&#x430;&#x442;&#x430;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>createdAt</code>
+      </td>
+      <td style="text-align:left"><code>Date</code>
+      </td>
+      <td style="text-align:left">&#x414;&#x430;&#x442;&#x430; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x438;&#x44F;
+        &#x447;&#x430;&#x442;&#x430;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>updatedAt</code>
+      </td>
+      <td style="text-align:left"><code>Date</code>
+      </td>
+      <td style="text-align:left">&#x414;&#x430;&#x442;&#x430; &#x43F;&#x43E;&#x441;&#x43B;&#x435;&#x434;&#x43D;&#x435;&#x433;&#x43E;
+        &#x43E;&#x431;&#x43D;&#x43E;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F;
+        &#x43F;&#x43E;&#x43B;&#x435;&#x439; &#x447;&#x430;&#x442;&#x430;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>active</code>
+      </td>
+      <td style="text-align:left"><code>boolean</code>
+      </td>
+      <td style="text-align:left">&#x410;&#x43A;&#x442;&#x438;&#x432;&#x435;&#x43D; &#x43B;&#x438; &#x447;&#x430;&#x442;
+        (&#x441;&#x43C;. <a href="../server-api/node.js-sdk/blocking-chats-and-users.md#blokirovanie-otdelnogo-chata">&#x431;&#x43B;&#x43E;&#x43A;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x43E;&#x442;&#x434;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x445; &#x447;&#x430;&#x442;&#x43E;&#x432;</a>)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>externalMetadata</code>
+      </td>
+      <td style="text-align:left"><code>json</code>
+      </td>
+      <td style="text-align:left">&#x41F;&#x440;&#x43E;&#x438;&#x437;&#x432;&#x43E;&#x43B;&#x44C;&#x43D;&#x44B;&#x435;
+        &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x435;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>companion</code>
+      </td>
+      <td style="text-align:left"><code>User</code>
+      </td>
+      <td style="text-align:left">&#x41E;&#x431;&#x44A;&#x435;&#x43A;&#x442;, &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x449;&#x438;&#x439;
+        &#x441;&#x43E;&#x431;&#x435;&#x441;&#x435;&#x434;&#x43D;&#x438;&#x43A;&#x430;
+        &#x432; &#x434;&#x430;&#x43D;&#x43D;&#x43E;&#x43C; &#x447;&#x430;&#x442;&#x435;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>unreadMessagesCount</code>
+      </td>
+      <td style="text-align:left"><code>number</code>
+      </td>
+      <td style="text-align:left">&#x41A;&#x43E;&#x43B;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43E;
+        &#x43D;&#x435;&#x43F;&#x440;&#x43E;&#x447;&#x438;&#x442;&#x430;&#x43D;&#x43D;&#x44B;&#x445;
+        &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x439; &#x432;
+        &#x434;&#x430;&#x43D;&#x43D;&#x43E;&#x43C; &#x447;&#x430;&#x442;&#x435;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>lastMessage</code>
+      </td>
+      <td style="text-align:left"><a href="obekt-message.md">Message</a>
+      </td>
+      <td style="text-align:left">
+        <p>&#x415;&#x441;&#x43B;&#x438; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;
+          &#x43F;&#x43E;&#x438;&#x441;&#x43A;&#x430; &#x447;&#x430;&#x442;&#x43E;&#x432;
+          &#x43F;&#x43E; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x44F;&#x43C; <code>query</code> &#x43D;&#x435;
+          &#x437;&#x430;&#x434;&#x430;&#x43D;, &#x442;&#x43E; &#x432; &#x44D;&#x442;&#x43E;&#x43C;
+          &#x43F;&#x43E;&#x43B;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442; &#x43F;&#x43E;&#x441;&#x43B;&#x435;&#x434;&#x43D;&#x435;&#x435;
+          &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x44F; &#x447;&#x430;&#x442;&#x430;.
+          &#x418;&#x43D;&#x430;&#x447;&#x435;, &#x435;&#x441;&#x43B;&#x438; &#x43F;&#x430;&#x440;&#x43C;&#x435;&#x442;&#x440;
+          &#x43F;&#x43E;&#x438;&#x441;&#x43A;&#x430; <code>query</code> &#x437;&#x430;&#x434;&#x430;&#x43D;,
+          &#x442;&#x43E; &#x432; &#x44D;&#x442;&#x43E;&#x43C; &#x43F;&#x43E;&#x43B;&#x435;
+          &#x431;&#x443;&#x434;&#x435;&#x442; &#x43F;&#x43E;&#x441;&#x43B;&#x435;&#x434;&#x43D;&#x435;&#x435;
+          &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x435;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x435;
+          &#x441;&#x43E;&#x43E;&#x442;&#x432;&#x435;&#x442;&#x441;&#x442;&#x432;&#x443;&#x435;&#x442;
+          &#x43F;&#x43E;&#x438;&#x441;&#x43A;&#x43E;&#x432;&#x43E;&#x43C;&#x443;
+          &#x437;&#x430;&#x43F;&#x440;&#x43E;&#x441;&#x443;.</p>
+        <p>&#x415;&#x441;&#x43B;&#x438; &#x432; &#x447;&#x430;&#x442;&#x435; &#x43D;&#x435;&#x442;
+          &#x43D;&#x438; &#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x44F;,
+          &#x442;&#x43E; &#x432; &#x44D;&#x442;&#x43E;&#x43C; &#x43F;&#x43E;&#x43B;&#x435;
+          &#x431;&#x443;&#x434;&#x435;&#x442; <code>null</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### Получение истории сообщений
 
