@@ -16,7 +16,28 @@ const messembed = new MessembedSdk({
 ### Получение списка чатов
 
 ```typescript
-const chats = await messembed.listPersonalChats();
+// Без параметров (используются значения по умолчанию)
+const chats = await messembed.listPersonalChats()
+
+// Или с параметрами
+const chats = await messembed.listPersonalChats({
+  // Поиск чатов по сообщениям. Если задать этот парамтер,
+  // то в результате в поле lastMessage будет содержать 
+  // последнее сообщение в чате, которое соответствует поиску.
+  // Необзятельный парамтер
+  query: '',
+
+  // Сортировка.
+  // Доступные значения:
+  // NEWER_FIRST - сначала новые (по умолчанию)
+  // UNREAD_FIRST - сначала непрочитанные
+  // Необзятельный парамтер
+  sort: 'NEWER_FIRST',
+
+  // Поиск чатов по содержанию externalMetadata
+  // Необзятельный парамтер
+  externalMetadata: { ... }
+});
 ```
 
 `chats` - это массив объектов `PersonalChat`, который имеет следующие поля:
