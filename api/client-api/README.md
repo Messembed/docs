@@ -295,6 +295,14 @@ console.log(messagesWithAttachments);
 await messembed.clearChatHistory('<chat id>');
 ```
 
+### Завершение сессии
+
+Чтобы завершить сессию конкретного инстанса MessembedSDK нужно вызвать метод `.close()`. Он закроет все соединения по вебсокету и удалит обработчики событий
+
+```typescript
+messembed.close()
+```
+
 ### Полный пример кода из этой страницы
 
 ```typescript
