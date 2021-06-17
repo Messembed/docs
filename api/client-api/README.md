@@ -359,7 +359,10 @@ await messembed.sendWritingIndicator('...');
 // Помечаем чат как прочитанный
 // В таком случае все сообщения, которые были не прочитанными,
 // станут прочитанными
-await messembed.readChat('<chat id>')
+await messembed.readChat('<chat id>');
+
+// Закрываем сессию
+messembed.close();
 
 ```
 
