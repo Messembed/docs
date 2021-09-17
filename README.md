@@ -4,7 +4,7 @@ description: Общее описание сервиса
 
 # Messembed
 
-![](.gitbook/assets/copy-of-messembed-logo-v2-2-.png)
+![](.gitbook/assets/image.png)
 
 Messembed - это сервис, который позволяет создавать мессенджер внутри приложения, который имеет весь нужный функционал для общения посредством сообщений.
 
